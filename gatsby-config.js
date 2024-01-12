@@ -3,10 +3,18 @@
  */
 module.exports = {
   siteMetadata: {
-    siteUrl: `https://www.yourdomain.tld`,
+    siteUrl: `https://visionary-syrniki-5ba007.netlify.app/`,
+    title: 'My First Gabsty Website'
   },
   plugins: [
 "gatsby-plugin-image",
-    "gatsby-plugin-sharp"
+    "gatsby-plugin-sharp",
+ {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: `blog`,
+        path: `${__dirname}/blog`,
+      }
+    },
 ],
 }
